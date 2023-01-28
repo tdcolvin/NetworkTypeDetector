@@ -22,7 +22,6 @@ class Detector5GViewModel(application: Application): AndroidViewModel(applicatio
     val telephonyType = callbackFlow {
         val telephonyManager = application.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
 
-        telephonyManager.dataNetworkType
         // The thread Executor used to run the listener. This governs how threads are created and
         // reused. Here we use a single thread.
         val exec = Executors.newSingleThreadExecutor()
